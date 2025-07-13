@@ -1,0 +1,13 @@
+(executable
+ (name main)
+ (modules main)
+ (libraries fmlib_browser)
+ (modes js))
+
+(rule
+ (targets main.js)
+ (deps main.bc.js)
+ (mode
+  (promote (until-clean)))
+ (action
+  (copy %{deps} %{targets})))

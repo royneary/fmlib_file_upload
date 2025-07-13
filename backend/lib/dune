@@ -1,0 +1,16 @@
+(library
+ (name backend)
+ (libraries dream)
+ (preprocess
+  (pps lwt_ppx)))
+
+(rule
+ (deps
+  (file %{project_root}/frontend/bin/main.js))
+ (action
+  (with-stdout-to
+   assets.ml
+   (progn
+    (echo "let js = {|")
+    (cat %{project_root}/frontend/bin/main.js)
+    (echo "|}\n")))))

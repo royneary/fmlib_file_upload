@@ -1,0 +1,19 @@
+break-before-in = fit-or-vertical
+break-cases = vertical
+break-fun-decl = fit-or-vertical
+break-fun-sig = fit-or-vertical
+break-infix = fit-or-vertical
+break-sequences = true
+break-string-literals = never
+doc-comments = before-except-val
+if-then-else = fit-or-vertical
+let-and = sparse
+let-binding-spacing = compact
+let-module = sparse
+module-item-spacing = sparse
+wrap-fun-args = false
+sequence-blank-line = preserve-one
+single-case = sparse
+type-decl = sparse
+wrap-comments = true
+
