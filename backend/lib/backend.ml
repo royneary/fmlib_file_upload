@@ -16,8 +16,6 @@ let index =
   </head>
 </html>|}
 
-let store_upload name contents uploads = (name, contents) :: uploads
-
 let run =
   Dream.run
   @@ Dream.logger
