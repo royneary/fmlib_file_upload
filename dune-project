@@ -17,19 +17,19 @@
 
 (pin
  (url
-  "git+https://github.com/royneary/fmlib.git#9d4a987ba8e8788eb609020b3ca503c10730c8d3")
+  "git+https://github.com/royneary/fmlib.git#ca0172786b9881851075d3fcf59443fbe8ea3c76")
  (package
   (name fmlib_browser)))
 
 (pin
  (url
-  "git+https://github.com/royneary/fmlib.git#9d4a987ba8e8788eb609020b3ca503c10730c8d3")
+  "git+https://github.com/royneary/fmlib.git#ca0172786b9881851075d3fcf59443fbe8ea3c76")
  (package
   (name fmlib_js)))
 
 (pin
  (url
-  "git+https://github.com/royneary/fmlib.git#9d4a987ba8e8788eb609020b3ca503c10730c8d3")
+  "git+https://github.com/royneary/fmlib.git#ca0172786b9881851075d3fcf59443fbe8ea3c76")
  (package
   (name fmlib_std)))
 

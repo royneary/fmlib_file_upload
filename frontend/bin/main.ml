@@ -35,8 +35,8 @@ let update (state : state) (msg : msg) : state * msg Command.t =
         (* FIXME: the filename should be URL-encoded, but fmlib_browser does not
            support that yet *)
         let url = "/upload/" ^ File.name file in
-        let expect = Task.Http.Expect.json Decoder.(field "url" string) in
-        Task.Http.request "PUT" url [] (Task.Http.Body.file file) expect
+        let expect = Http.Expect.json Decoder.(field "url" string) in
+        Task.http_request "PUT" url [] (Http.Body.file file) expect
         |> Command.attempt (fun result ->
                match result with
                | Error _ ->
@@ -52,8 +52,8 @@ let update (state : state) (msg : msg) : state * msg Command.t =
           url
       in
       let cmd =
-        let expect = Task.Http.Expect.string in
-        Task.Http.request "GET" url [] Task.Http.Body.empty expect
+        let expect = Http.Expect.string in
+        Task.http_request "GET" url [] Http.Body.empty expect
         |> Command.attempt (fun result ->
                match result with
                | Error _ ->
